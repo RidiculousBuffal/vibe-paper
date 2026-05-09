@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Hardened Runtime（DMG 分发必需） -->
+    <key>com.apple.security.app-sandbox</key>
+    <false/>
+    <!-- 允许读取用户选择的文件（Security-Scoped Bookmark） -->
+    <key>com.apple.security.files.user-selected.read-only</key>
+    <true/>
+    <!-- AVFoundation 硬件解码（HEVC / H.264） -->
+    <key>com.apple.security.device.camera</key>
+    <false/>
+</dict>
+</plist>

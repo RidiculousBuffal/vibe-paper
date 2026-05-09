@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.vibepaper.app</string>
+    <key>CFBundleName</key>
+    <string>VibePaper</string>
+    <key>CFBundleDisplayName</key>
+    <string>VibePaper</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleExecutable</key>
+    <string>VibePaper</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright © 2026 VibePaper. All rights reserved.</string>
+    <!-- 最低系统要求 macOS 14 Sonoma -->
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <!-- 允许从 NSOpenPanel 读取任意文件（Security-Scoped Bookmark） -->
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>VibePaper 需要访问您的视频文件以设置动态壁纸。</string>
+</dict>
+</plist>
