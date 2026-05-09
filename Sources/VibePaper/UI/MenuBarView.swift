@@ -69,24 +69,22 @@ private struct MenuButton: View {
     let systemImage: String
     let action: () -> Void
 
+    @State private var isHovered = false
+
     var body: some View {
         Button(action: action) {
             Label(label, systemImage: systemImage)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .padding(.horizontal, 12)
         .padding(.vertical, 5)
-        .background(hoverBackground)
-    }
-
-    @State private var isHovered = false
-
-    private var hoverBackground: some View {
-        RoundedRectangle(cornerRadius: 6)
-            .fill(isHovered ? Color.accentColor.opacity(0.15) : Color.clear)
-            .padding(.horizontal, 4)
-            .onHover { isHovered = $0 }
+        .background(
+            RoundedRectangle(cornerRadius: 6)
+                .fill(isHovered ? Color.accentColor.opacity(0.15) : Color.clear)
+                .padding(.horizontal, 4)
+        )
+        .contentShape(Rectangle())
+        .onHover { isHovered = $0 }
     }
 }
