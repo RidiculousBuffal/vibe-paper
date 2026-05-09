@@ -58,24 +58,6 @@ final class DisplayManager: ObservableObject {
             Task { @MainActor [weak self] in self?.reloadWithCurrentEnergyPolicy() }
         }
 
-        // 屏幕保护程序 / 锁屏 / 显示器关闭 → 暂停
-        // NSApplication.didResignActiveNotification 在 App 失去激活时触发（锁屏、切换用户等）
-        NotificationCenter.default.addObserver(
-            forName: NSApplication.didResignActiveNotification,
-            object: nil,
-            queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor [weak self] in self?.pauseAll() }
-        }
-
-        NotificationCenter.default.addObserver(
-            forName: NSApplication.didBecomeActiveNotification,
-            object: nil,
-            queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor [weak self] in self?.resumeAll() }
-        }
-
         // 屏幕保护程序启动
         NSWorkspace.shared.notificationCenter.addObserver(
             forName: NSWorkspace.screensDidSleepNotification,
