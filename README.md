@@ -1,6 +1,6 @@
 # VibePaper
 
-轻量级 macOS 原生动态壁纸应用。导入 4K 视频，设为桌面壁纸，支持多显示器独立壁纸与低能耗策略。
+> 一个 VIBE CODING 诞生的 给MAC配置动态壁纸的软件
 
 ## 功能
 
@@ -18,14 +18,6 @@
 
 - macOS 14 Sonoma 或更高版本
 - Apple Silicon / Intel 均支持
-
-## 快速开始
-
-```bash
-git clone https://github.com/yourname/vibe-paper.git
-cd vibe-paper
-swift run
-```
 
 ## 构建与发布
 
